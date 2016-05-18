@@ -1,0 +1,18 @@
+controller_list:
+ - name: jaco_arm/joint_velocity_controller
+   action_ns: trajectory
+   type: FollowJointTrajectory
+   default: true
+   joints:
+     - jaco_shoulder_pan_joint
+     - jaco_shoulder_lift_joint
+     - jaco_elbow_joint
+     - jaco_wrist_1_joint
+     - jaco_wrist_2_joint
+     - jaco_wrist_3_joint
+ - name: gripper_actions
+   action_ns: gripper_command
+   type: GripperCommand
+   default: false
+   joints:
+     - robotiq_85_left_knuckle_joint
